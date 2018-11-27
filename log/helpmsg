@@ -1,0 +1,15 @@
+== Comando:
+java -jar jfreq.jar <ALGORITMO> <ARQUIVO>
+
+<ALGORITMO>
+pseq     - Pesquisa Sequencial
+pbinaria - Pesquisa Binaria
+arvore   - Arvore Binaria de Pesquisa (BST)
+haberto  - Hash com Enderecamento aberto
+hlista   - Hash com Lista Encadeada
+
+<ARQUIVO>
+Arquivo de texto (.txt), nao-binario
+
+Exemplo:
+java -jar jfreq.jar hlista artigo.txt 1024
