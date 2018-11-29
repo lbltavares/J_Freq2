@@ -4,7 +4,7 @@ JFreq - Versão 1.0
 	java -jar jfreq.jar
 
 ##### Ou direto da linha de comando:
-	java -jar jfreq.jar **[algoritmo]** **[arquivo.txt]**
+	java -jar jfreq.jar [algoritmo] [arquivo.txt]
 	
 ## [Algoritmo]:
 	- hlista	Hash com lista encadeada	
