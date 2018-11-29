@@ -1,4 +1,4 @@
-JFreq - Versão 1.0
+#JFreq - Versão 1.0
 
 ## Modo de usar:
 	java -jar jfreq.jar
