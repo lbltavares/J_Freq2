@@ -1,9 +1,9 @@
 package com.jfreq.estruturas;
 
 import java.util.AbstractMap.SimpleEntry;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -113,7 +113,7 @@ public class HashLista implements Map<String, Integer> {
 		int h = hash(key);
 		if (tabela[h] == null || tabela[h].isEmpty()) {
 			comparacoes++;
-			tabela[h] = new ArrayList<>();
+			tabela[h] = new LinkedList<>();
 			tabela[h].add(new SimpleEntry<>(key, value));
 		} else {
 			for (int i = 0; i < tabela[h].size(); i++) {
@@ -132,7 +132,7 @@ public class HashLista implements Map<String, Integer> {
 	public Integer put(String key, Integer value) {
 		int h = hash(key);
 		if (tabela[h] == null || tabela[h].isEmpty()) {
-			tabela[h] = new ArrayList<>();
+			tabela[h] = new LinkedList<>();
 			tabela[h].add(new SimpleEntry<>(key, value));
 		} else {
 			for (int i = 0; i < tabela[h].size(); i++) {
@@ -174,7 +174,7 @@ public class HashLista implements Map<String, Integer> {
 
 	@Override
 	public Collection<Integer> values() {
-		Collection<Integer> vals = new ArrayList<>();
+		Collection<Integer> vals = new LinkedList<>();
 		for (int i = 0; i < tamanho; i++) {
 			if (tabela[i] != null) {
 				tabela[i].forEach(e -> vals.add(e.getValue()));

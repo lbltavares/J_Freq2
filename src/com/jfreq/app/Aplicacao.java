@@ -1,7 +1,10 @@
 package com.jfreq.app;
 
+import java.awt.EventQueue;
+
 import com.jfreq.algoritmo.Algoritmos;
 import com.jfreq.algoritmo.Resultado;
+import com.jfreq.gui.Janela;
 import com.jfreq.util.Util;
 
 public class Aplicacao {
@@ -13,20 +16,18 @@ public class Aplicacao {
 			Resultado resultado = Algoritmos.executar(algoritmo, arquivo);
 			resultado.print();
 		} catch (Exception e) {
-			e.printStackTrace();
 			System.err.println("Houve um erro ao processar o comando: " + e.getMessage());
-			Util.tryProcessarLinhas("log/helpmsg", System.out::println);
+			Util.exibirHelp();
 		}
 	}
 
 	public static void main(String[] args) throws Exception {
-		args = new String[] { "hlista", "teste.txt" };
+		args = new String[] {"asd", "teste.txt"};
 		exec(args);
-
 		System.exit(0);
-
+		
 		if (args.length == 0) {
-			// Iniciar GUI
+			EventQueue.invokeLater(Janela::getInstance);
 		} else {
 			exec(args);
 		}

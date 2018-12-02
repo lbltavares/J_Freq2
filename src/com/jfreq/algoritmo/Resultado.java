@@ -12,8 +12,8 @@ public class Resultado {
 	public long tempo, comparacoes;
 	public Map<String, Integer> palavras;
 
-	private int maiorFreq, menorFreq;
-	private String strMaisFreq, strMenosFreq;
+	public int maiorFreq, menorFreq;
+	public String strMaisFreq, strMenosFreq;
 
 	public void print() {
 		int N = Util.lerConfig("MAXIMO_EXIBICOES", 1024, Integer::parseInt);
@@ -39,7 +39,7 @@ public class Resultado {
 		printEstatisticas();
 	}
 
-	private void calcularFrequencias() {
+	public void calcularFrequencias() {
 		menorFreq = Integer.MAX_VALUE;
 		palavras.forEach((palavra, freq) -> {
 			if (freq > maiorFreq) {

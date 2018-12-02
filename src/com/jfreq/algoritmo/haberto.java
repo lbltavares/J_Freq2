@@ -9,7 +9,7 @@ public class haberto implements Algoritmo {
 
 	public haberto() {
 		resultado = new Resultado();
-		resultado.nomeAlgoritmo = "Hash Aberto";
+		resultado.nomeAlgoritmo = "Hash com Enderecamento Aberto";
 	}
 
 	@Override

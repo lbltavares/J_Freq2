@@ -30,6 +30,8 @@ public final class Util {
 			{ "ò", "o" }, //
 			{ "ô", "o" }, //
 			{ "õ", "o" }, //
+			{ "ú", "u" }, //
+			{ "ü", "u" }, //
 			{ "ç", "c" }, //
 	};
 
@@ -139,6 +141,21 @@ public final class Util {
 		for (int i = 0; i < N; i++)
 			System.out.print(seq);
 		System.out.println();
+	}
+
+	public static void exibirHelp() {
+		println("Comando:");
+		println("java -jar jfreq.jar [algoritmo] [arquivo.txt]");
+		println("\n[Algoritmo]:");
+		println("pseq     - Pesquisa Sequencial");
+		println("pbinaria - Pesquisa Binaria");
+		println("arvore   - Arvore Binaria de Pesquisa (BST)");
+		println("haberto  - Hash com Enderecamento aberto");
+		println("hlista   - Hash com Lista Encadeada");
+		println("\n[Arquivo]:");
+		println("Arquivo de texto (.txt), nao-binario");
+		println("\nExemplo:");
+		println("java -jar jfreq.jar hlista artigo.txt");
 	}
 
 }

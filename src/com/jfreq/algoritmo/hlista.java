@@ -9,7 +9,7 @@ public class hlista implements Algoritmo {
 
 	public hlista() {
 		resultado = new Resultado();
-		resultado.nomeAlgoritmo = "Hash com Lista";
+		resultado.nomeAlgoritmo = "Hash com Lista Encadeada";
 	}
 
 	@Override
