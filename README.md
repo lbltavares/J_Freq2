@@ -1,7 +1,8 @@
 #JFreq - Versão 1.0
 
 ## Como executar:
-	java -jar jfreq.jar
+##### No modo grafico:
+	Clique em jfreq.jar ou execute o comando: java -jar jfreq.jar
 
 ##### Ou direto da linha de comando:
 	java -jar jfreq.jar [algoritmo] [arquivo.txt]
