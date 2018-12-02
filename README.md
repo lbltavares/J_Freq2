@@ -1,7 +1,11 @@
-#JFreq - Versão 1.0
+#JFreq - Versão 1.0: Contador de Frequencias de Palavras
+
+![screenshot1](https://user-images.githubusercontent.com/34322384/49344721-5a7a6a00-f662-11e8-8bbf-49ee11db4647.png)
+![screenshot2](https://user-images.githubusercontent.com/34322384/49344722-5c442d80-f662-11e8-8b5c-ba26b5022215.png)
 
 ## Como executar:
-	java -jar jfreq.jar
+##### No modo grafico:
+	Clique em jfreq.jar ou execute o comando: java -jar jfreq.jar
 
 ##### Ou direto da linha de comando:
 	java -jar jfreq.jar [algoritmo] [arquivo.txt]
