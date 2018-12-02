@@ -22,10 +22,6 @@ public class Aplicacao {
 	}
 
 	public static void main(String[] args) throws Exception {
-		args = new String[] {"asd", "teste.txt"};
-		exec(args);
-		System.exit(0);
-		
 		if (args.length == 0) {
 			EventQueue.invokeLater(Janela::getInstance);
 		} else {

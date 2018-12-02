@@ -144,16 +144,15 @@ public class BST implements Map<String, Integer> {
 	}
 
 	private void add(Node no, String key, Integer amount) {
+		comparacoes++;
 		if (no == null) {
 			root = new Node(key, amount);
 			return;
 		}
 		if (no.key.equals(key)) {
-			comparacoes++;
 			no.val = no.val != null ? no.val + amount : amount;
 			return;
 		}
-		comparacoes += 2;
 		if (no.key.compareTo(key) > 0) { // No esquerdo
 			if (no.esq == null)
 				no.esq = new Node(key, amount);
@@ -172,16 +171,15 @@ public class BST implements Map<String, Integer> {
 	}
 
 	private Integer put(Node no, String key, Integer val) {
+		comparacoes++;
 		if (no == null) {
 			root = new Node(key, val);
 			return val;
 		}
 		if (no.key.equals(key)) {
-			comparacoes++;
 			no.val = val;
 			return no.val;
 		}
-		comparacoes += 2;
 		if (no.key.compareTo(key) > 0) { // No esquerdo
 			if (no.esq == null)
 				return (no.esq = new Node(key, val)).val;

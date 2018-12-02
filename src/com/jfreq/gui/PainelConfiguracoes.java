@@ -117,8 +117,8 @@ public final class PainelConfiguracoes extends JPanel {
 	private void restaurarPadroes() {
 		inverterOrdemCB.setSelected(Util.lerConfig("INVERTER_ORDEM", false, Boolean::new));
 		desenharArvoreCB.setSelected(Util.lerConfig("DESENHAR_ARVORE", false, Boolean::new));
-		substituirAcentuacaoCB.setSelected(Util.lerConfig("SUBSTITUIR_ACENTUACAO", false, Boolean::new));
-		ignorarComunsCB.setSelected(Util.lerConfig("IGNORAR_COMUNS", false, Boolean::new));
+		substituirAcentuacaoCB.setSelected(Util.lerConfig("SUBSTITUIR_ACENTUACAO", true, Boolean::new));
+		ignorarComunsCB.setSelected(Util.lerConfig("IGNORAR_COMUNS", true, Boolean::new));
 		listaComunsTF.setText(Util.lerConfig("PALAVRAS_COMUNS", "", String::new));
 		minimoLetras.setValue(Util.lerConfig("MINIMO_LETRAS", 2, Integer::parseInt));
 		maximoLetras.setValue(Util.lerConfig("MAXIMO_LETRAS", 20, Integer::parseInt));

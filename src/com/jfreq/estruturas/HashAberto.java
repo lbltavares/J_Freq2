@@ -81,7 +81,6 @@ public class HashAberto implements Map<String, Integer> {
 		if (key instanceof String) {
 			int h = hash((String) key);
 			if (tabela[h] != null && tabela[h].getKey().equals(key)) {
-				comparacoes++;
 				return tabela[h].getValue();
 			} else {
 				for (int i = tamanho; i < tamanho + reserva; i++) {
@@ -116,21 +115,18 @@ public class HashAberto implements Map<String, Integer> {
 
 	public void add(String key, Integer value) {
 		int h = hash(key);
+		comparacoes++;
 		if (tabela[h] == null) {
-			comparacoes += 1;
 			tabela[h] = new SimpleEntry<>(key, value);
 		} else if (tabela[h].getKey().equals(key)) {
-			comparacoes += 2;
 			tabela[h] = new SimpleEntry<>(key, tabela[h].getValue() + value);
 		} else {
-			comparacoes += 3;
 			int n = -1;
 			for (int i = tamanho; i < tamanho + reserva; i++) {
 				if (tabela[i] == null) {
-					comparacoes++;
 					n = i;
 				} else if (tabela[i].getKey().equals(key)) {
-					comparacoes += 2;
+					comparacoes++;
 					tabela[i] = new SimpleEntry<>(key, tabela[i].getValue() + value);
 					return;
 				}
