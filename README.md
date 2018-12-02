@@ -19,7 +19,7 @@
 ## Exemplo:
 	java -jar jfreq.jar pseq palavras.txt
 
-Configurações:
+## Configurações:
 	O arquivo "config.ini" contém algumas configurações e pode ser editado durante a execução
 	do programa em modo gráfico. As configurações disponíveis são:
 
