@@ -1,6 +1,6 @@
 #JFreq - Versão 1.0
 
-## Modo de usar:
+## Como executar:
 	java -jar jfreq.jar
 
 ##### Ou direto da linha de comando:
