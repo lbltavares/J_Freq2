@@ -107,11 +107,10 @@ public class BST implements Map<String, Integer> {
 			return null;
 		if (no.key.equals(key))
 			return no.val;
-		if (no.esq != null)
+		if (key.compareTo(no.key) < 0)
 			return get(no.esq, key);
-		if (no.dir != null)
+		else
 			return get(no.dir, key);
-		return null;
 	}
 
 	@Override
@@ -150,9 +149,11 @@ public class BST implements Map<String, Integer> {
 			return;
 		}
 		if (no.key.equals(key)) {
+			comparacoes++;
 			no.val = no.val != null ? no.val + amount : amount;
 			return;
 		}
+		comparacoes += 2;
 		if (no.key.compareTo(key) > 0) { // No esquerdo
 			if (no.esq == null)
 				no.esq = new Node(key, amount);
@@ -176,9 +177,11 @@ public class BST implements Map<String, Integer> {
 			return val;
 		}
 		if (no.key.equals(key)) {
+			comparacoes++;
 			no.val = val;
 			return no.val;
 		}
+		comparacoes += 2;
 		if (no.key.compareTo(key) > 0) { // No esquerdo
 			if (no.esq == null)
 				return (no.esq = new Node(key, val)).val;
@@ -208,9 +211,15 @@ public class BST implements Map<String, Integer> {
 		return null;
 	}
 
+	public int size(Node no) {
+		if (no != null)
+			return 1 + size(no.esq) + size(no.dir);
+		return 0;
+	}
+
 	@Override
 	public int size() {
-		return 0;
+		return size(root);
 	}
 
 	private void values(Node no, Collection<Integer> vals) {

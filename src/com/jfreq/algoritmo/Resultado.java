@@ -29,7 +29,8 @@ public class Resultado {
 		Iterator<String> it = ordenadas.iterator();
 		for (int i = 0; i < N && it.hasNext(); i++) {
 			String p = it.next();
-			Util.println("%10d    %s", palavras.get(p), p);
+			int fre = palavras.get(p);
+			Util.println("%10d    %s", fre, p);
 		}
 
 		// Exibe as estatisticas
@@ -63,7 +64,7 @@ public class Resultado {
 		Util.println("* Tempo de execucao: %.2f ms (%d ns)", (tempo / 1000000.0), tempo);
 		Util.println("* Numero de comparacoes: " + comparacoes);
 		Util.println("* Numero de palavras: " + palavras.size());
-		Util.println("* Palavra mais frequente: \"%s\" (%d ocorrencias)", strMaisFreq, maiorFreq);
-		Util.println("* Palavra menos frequente: \"%s\" (%d ocorrencias)", strMenosFreq, menorFreq);
+		Util.println("* Uma das palavras mais frequentes: \"%s\" (%d ocorrencias)", strMaisFreq, maiorFreq);
+		Util.println("* Uma das palabras menos frequentes: \"%s\" (%d ocorrencias)", strMenosFreq, menorFreq);
 	}
 }

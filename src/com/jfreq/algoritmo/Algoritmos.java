@@ -30,7 +30,7 @@ public final class Algoritmos {
 		} else if (nome.equalsIgnoreCase("haberto")) {
 
 		} else if (nome.equalsIgnoreCase("arvore")) {
-
+			return new arvore();
 		}
 		throw new Exception("Algoritmo invalido: " + nome);
 	}

@@ -2,7 +2,6 @@ package com.jfreq.app;
 
 import com.jfreq.algoritmo.Algoritmos;
 import com.jfreq.algoritmo.Resultado;
-import com.jfreq.estruturas.BST;
 import com.jfreq.util.Util;
 
 public class Aplicacao {
@@ -20,27 +19,7 @@ public class Aplicacao {
 		}
 	}
 
-	public static void main(String[] args) {
-		BST bst = new BST();
-
-		bst.put("carolina", 4);
-		bst.put("bernardo", 49);
-		bst.put("daniel", 30);
-		bst.put("ana", 93);
-		bst.add("paulo", 93);
-		bst.put("lucas", 93);
-		bst.put("barbara", 49);
-		bst.add("paulo", 1);
-		bst.put("felipe", 93);
-		bst.put("wanderson", 93);
-		bst.put("yan", 93);
-		bst.put("bruno", 93);
-		bst.put("rodrigo", 93);
-
-		bst.print();
-
-		System.exit(0);
-
+	public static void main(String[] args) throws Exception {
 		if (args.length == 0) {
 			// Iniciar GUI
 		} else {
