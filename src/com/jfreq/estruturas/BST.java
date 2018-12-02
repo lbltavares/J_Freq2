@@ -208,7 +208,7 @@ public class BST implements Map<String, Integer> {
 
 	@Override
 	public Integer remove(Object key) {
-		return null;
+		return null; // Nao e necessario
 	}
 
 	public int size(Node no) {

@@ -20,6 +20,11 @@ public class Aplicacao {
 	}
 
 	public static void main(String[] args) throws Exception {
+		args = new String[] {"pbinaria", "teste.txt"};
+		exec(args);
+
+		System.exit(1);
+
 		if (args.length == 0) {
 			// Iniciar GUI
 		} else {

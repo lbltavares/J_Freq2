@@ -65,6 +65,6 @@ public class Resultado {
 		Util.println("* Numero de comparacoes: " + comparacoes);
 		Util.println("* Numero de palavras: " + palavras.size());
 		Util.println("* Uma das palavras mais frequentes: \"%s\" (%d ocorrencias)", strMaisFreq, maiorFreq);
-		Util.println("* Uma das palabras menos frequentes: \"%s\" (%d ocorrencias)", strMenosFreq, menorFreq);
+		Util.println("* Uma das palavras menos frequentes: \"%s\" (%d ocorrencias)", strMenosFreq, menorFreq);
 	}
 }
