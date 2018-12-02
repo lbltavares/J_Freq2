@@ -2,6 +2,7 @@ package com.jfreq.app;
 
 import com.jfreq.algoritmo.Algoritmos;
 import com.jfreq.algoritmo.Resultado;
+import com.jfreq.estruturas.BST;
 import com.jfreq.util.Util;
 
 public class Aplicacao {
@@ -20,10 +21,16 @@ public class Aplicacao {
 	}
 
 	public static void main(String[] args) {
-		args = new String[] { "pseq", "ateste.txt" };
-		exec(args);
+		BST bst = new BST();
+
+		bst.put("carolina", 4);
+		bst.put("bernardo", 49);
+		bst.put("ana", 93);
+		
+		bst.printTree();
 
 		System.exit(0);
+
 		if (args.length == 0) {
 			// Iniciar GUI
 		} else {
