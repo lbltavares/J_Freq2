@@ -26,22 +26,22 @@ public class BST implements Map<String, Integer> {
 		return comparacoes;
 	}
 
-	private void printTree(Node no, int tabs) {
-		if (no == null) {
-			tabs--;
-			return;
+	private void print(Node no, int tabs) {
+		if (no != null) {
+			for (int i = 0; i < tabs; i++)
+				System.out.print("|  ");
+			System.out.println("+" + no.key + " = " + no.val);
+			if (no.esq != null) {
+				print(no.esq, tabs + 1);
+			}
+			if (no.dir != null) {
+				print(no.dir, tabs + 1);
+			}
 		}
-		for (int i = 0; i < tabs; i++)
-			System.out.print("-");
-		System.out.println(no.key + " = " + no.val);
-		if (no.esq != null)
-			printTree(no.esq, ++tabs);
-		if (no.dir != null)
-			printTree(no.dir, ++tabs);
 	}
 
-	public void printTree() {
-		printTree(root, 0);
+	public void print() {
+		print(root, 0);
 	}
 
 	@Override
@@ -144,21 +144,47 @@ public class BST implements Map<String, Integer> {
 		return set;
 	}
 
+	private void add(Node no, String key, Integer amount) {
+		if (no == null) {
+			root = new Node(key, amount);
+			return;
+		}
+		if (no.key.equals(key)) {
+			no.val = no.val != null ? no.val + amount : amount;
+			return;
+		}
+		if (no.key.compareTo(key) > 0) { // No esquerdo
+			if (no.esq == null)
+				no.esq = new Node(key, amount);
+			else
+				add(no.esq, key, amount);
+		} else if (no.key.compareTo(key) < 0) { // No direito
+			if (no.dir == null)
+				no.dir = new Node(key, amount);
+			else
+				add(no.dir, key, amount);
+		}
+	}
+
+	public void add(String key, Integer amount) {
+		add(root, key, amount);
+	}
+
 	private Integer put(Node no, String key, Integer val) {
 		if (no == null) {
 			root = new Node(key, val);
 			return val;
 		}
 		if (no.key.equals(key)) {
-			no.val = no.val != null ? no.val + val : val;
+			no.val = val;
 			return no.val;
 		}
-		if (no.key.compareTo(key) < 0) { // No esquerdo
+		if (no.key.compareTo(key) > 0) { // No esquerdo
 			if (no.esq == null)
 				return (no.esq = new Node(key, val)).val;
 			else
 				put(no.esq, key, val);
-		} else if (no.key.compareTo(key) > 0) { // No direito
+		} else if (no.key.compareTo(key) < 0) { // No direito
 			if (no.dir == null)
 				return (no.dir = new Node(key, val)).val;
 			else

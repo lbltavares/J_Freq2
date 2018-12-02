@@ -25,9 +25,19 @@ public class Aplicacao {
 
 		bst.put("carolina", 4);
 		bst.put("bernardo", 49);
+		bst.put("daniel", 30);
 		bst.put("ana", 93);
-		
-		bst.printTree();
+		bst.add("paulo", 93);
+		bst.put("lucas", 93);
+		bst.put("barbara", 49);
+		bst.add("paulo", 1);
+		bst.put("felipe", 93);
+		bst.put("wanderson", 93);
+		bst.put("yan", 93);
+		bst.put("bruno", 93);
+		bst.put("rodrigo", 93);
+
+		bst.print();
 
 		System.exit(0);
 
