@@ -26,9 +26,9 @@ public final class Algoritmos {
 		} else if (nome.equalsIgnoreCase("pbinaria")) {
 			return new pbinaria();
 		} else if (nome.equalsIgnoreCase("hlista")) {
-
+			return new hlista();
 		} else if (nome.equalsIgnoreCase("haberto")) {
-
+			return new haberto();
 		} else if (nome.equalsIgnoreCase("arvore")) {
 			return new arvore();
 		}

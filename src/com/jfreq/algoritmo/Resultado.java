@@ -15,7 +15,9 @@ public class Resultado {
 	private int maiorFreq, menorFreq;
 	private String strMaisFreq, strMenosFreq;
 
-	public void print(int N) {
+	public void print() {
+		int N = Util.lerConfig("MAXIMO_EXIBICOES", 1024, Integer::parseInt);
+
 		printCabecalho();
 
 		// Ordenacao de acordo com o Config.ini
